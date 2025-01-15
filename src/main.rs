@@ -1,9 +1,13 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
+use std::env;
 
 fn main() {
-    let file = File::open("non_existent_file.txt");
-    let file = match file {
+    let args: Vec<String> = env::args().collect();
+    print!("My file path is: {:?}", args[0]);
+
+    let file: Result<File, std::io::Error> = File::open("non_existent_file.txt");
+    let file: File = match file {
         Ok(file) => file,
         Err(error) => {
             match error.kind() {
@@ -17,7 +21,7 @@ fn main() {
         }
     };
     
-    let reader = BufReader::new(file);
+    let reader: BufReader<File> = BufReader::new(file);
     for line in reader.lines() {
         match line {
             Ok(line) => println!("{}", line),
