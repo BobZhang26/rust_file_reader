@@ -1,30 +1,11 @@
-# Rust project template
+# Rust project: file reader and debugging 
 
-In this template, I used Visual Studio Code to create a new Codespace configuration with dev containers.
+## Concepts Covered:
+- Introduction to Rust: Students will be introduced to the provided source code and its basic structure, serving as a starting point for the lab.
+- Variable assignment and immutability: Students will explore how variables are assigned and how immutability is enforced in Rust.
+- Basics of control flow: Students will understand how control flow structures like match expressions and loops are used to handle errors and process file contents.
+- Function Basics: Students will examine the main function and its purpose, as well as how to structure and organize code in Rust programs.
+- Error handling: Students will learn how to handle different error cases when opening and reading files, using the match expression to provide helpful error messages.
+- File processing: Students will modify the code to read the specified file line by line and print its contents to the console.
 
-```json
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/rust
-{
-	"name": "Rust",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	// "image": "mcr.microsoft.com/devcontainers/rust:1-1-bullseye",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"GitHub.copilot"
-			]
-		}
-	}
-}
-```
-
-Use the Rust image for the configuration. The image is loaded from a Dockerfile
-```python
-FROM mcr.microsoft.com/devcontainers/rust:1-1-bullseye
-RUN apt-get update 
-```
+By completing this lab, you will gain practical experience in Rust by extending an existing file reader application. You will develop skills in file I/O, error handling, and some basic code organization, utilizing the concepts introduced in the lessons for this week.
